@@ -631,7 +631,7 @@
         .actors {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            padding-bottom: 40px;
+            padding-bottom: 4vh;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -639,15 +639,15 @@
         .actors-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 10px;
+            gap: 3vh;
+            margin: 1vh;
         }
 
         .actor-card {
             border: 3px solid #e0e0e0;
             border-top-width: 7px;
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 1.2vh;
+            padding: 2.5vh;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
@@ -739,7 +739,7 @@
         .arguments {
             max-width: 1200px;
             overflow: hidden;
-            padding: 60px;
+            padding: 6vh;
             margin: 0 auto;
         }
 
@@ -923,19 +923,20 @@
 
         /** Terminologie & Source */
         .definition {
-            padding: 30px;
-            max-width: 1200px;
+            padding: 20px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
         .definitions-container {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             overflow: hidden;
+            width: 100%;
         }
 
         .tabs-header {
@@ -943,6 +944,7 @@
             background: #f8f9fa;
             border-bottom: 1px solid #dee2e6;
             overflow-x: auto;
+            flex-wrap: nowrap;
         }
 
         .tabs-header::-webkit-scrollbar {
@@ -961,9 +963,9 @@
         .tab-button {
             background: none;
             border: none;
-            padding: 15px 20px;
+            padding: 10px 15px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             color: #6c757d;
             border-right: 1px solid #dee2e6;
@@ -971,8 +973,9 @@
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            min-width: 180px;
+            min-width: 120px;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .tab-button:hover {
@@ -989,13 +992,14 @@
 
         .tab-icon {
             margin-right: 8px;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .tab-content {
             display: none;
-            padding: 30px;
+            padding: 20px;
             animation: fadeIn 0.3s ease-in;
+            width: 100%;
         }
 
         .tab-content.active {
@@ -1007,7 +1011,6 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1015,36 +1018,36 @@
         }
 
         .definition-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
 
         .definition-icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
             background: linear-gradient(45deg, #3498db, #2980b9);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .definition-content {
             color: #34495e;
-            line-height: 1.7;
-            font-size: 1.1rem;
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         .highlight {
             background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 6px;
+            padding: 2px 5px;
             border-radius: 4px;
             font-weight: 500;
         }
@@ -1052,37 +1055,38 @@
         .sources-section {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
-            padding: 30px;
-            margin-top: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         .sources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
         }
 
         .source-card {
             background-color: #f8f9fa;
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
             border-left: 4px solid #3498db;
-            margin-top: 15px;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
 
         .source-card .title {
             font-weight: bold;
             color: #2c3e50;
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin-bottom: 5px;
         }
 
         .source-card a {
             color: #007bff;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 0.8em;
+            word-break: break-all;
         }
 
         .source-card a:hover {
@@ -1090,18 +1094,79 @@
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
+            .definition {
+                padding: 15px;
             }
 
-            .cards-grid {
+            .definitions-container {
+                border-radius: 10px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .tab-button {
+                padding: 8px 12px;
+                font-size: 0.7rem;
+                min-width: 100px;
+            }
+
+            .definition-title {
+                font-size: 1.3rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .definition-icon {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+
+            .definition-content {
+                font-size: 0.9rem;
+            }
+
+            .sources-grid {
                 grid-template-columns: 1fr;
             }
 
-            .card {
-                padding: 20px;
+            .highlight {
+                padding: 1px 3px;
+                font-size: 0.9em;
             }
         }
+
+        @media (max-width: 480px) {
+            .definition {
+                padding: 10px;
+            }
+
+            .tab-button {
+                padding: 6px 10px;
+                font-size: 0.65rem;
+                min-width: 80px;
+            }
+
+            .definition-title {
+                font-size: 1.1rem;
+            }
+
+            .definition-content {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .source-card {
+                padding: 8px;
+            }
+
+            .source-card .title {
+                font-size: 0.7em;
+            }
+
+            .source-card a {
+                font-size: 0.7em;
+            }
+        }
+
     </style>
 </head>
 
