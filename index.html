@@ -136,6 +136,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(100%);
                 opacity: 0;
@@ -143,9 +144,12 @@
         }
 
         @keyframes wave {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(0) scaleY(1);
             }
+
             50% {
                 transform: translateX(-10px) scaleY(1.1);
             }
@@ -173,9 +177,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-20px);
             }
@@ -1009,11 +1016,13 @@
                 padding: 2vh 2vw;
             }
 
-            .folder-header, .subfolder-header {
+            .folder-header,
+            .subfolder-header {
                 padding: 10px;
             }
 
-            .folder-title, .subfolder-title {
+            .folder-title,
+            .subfolder-title {
                 font-size: 1em;
             }
 
@@ -1114,6 +1123,7 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1159,15 +1169,16 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 2vh;
-            margin-top: 2vh;
+            margin: 0 auto;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             width: 100%;
         }
 
         .sources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
+            gap: 15px;
+            margin: 10px 0;
+            padding: 0 10px;
         }
 
         .source-card {
@@ -1186,6 +1197,7 @@
         }
 
         .source-card a {
+            display: block;
             color: #007bff;
             text-decoration: none;
             font-size: 0.8em;
@@ -1227,10 +1239,6 @@
                 font-size: 0.9rem;
             }
 
-            .sources-grid {
-                grid-template-columns: 1fr;
-            }
-
             .highlight {
                 padding: 1px 3px;
                 font-size: 0.9em;
@@ -1270,13 +1278,43 @@
             }
         }
 
+        /** Footer */
+        .site-footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 4vh;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            text-align: center;
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="animation">
         <div class="water-animation"></div>
-    
+
         <div class="title-container">
             <h1 class="main-title">Les barrages hydroélectriques</h1>
             <p class="subtitle">entre révolution énergétique et déséquilibres environnementaux et sociaux</p>
@@ -1328,7 +1366,8 @@
                 <div class="content-box" id="item-1895">
                     <div class="event-title">Barrage Adams Power Plant</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Niagara+Falls%2C+%C3%89tats-Unis" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Niagara+Falls%2C+%C3%89tats-Unis" target="_blank"
+                            rel="noopener noreferrer">
                             Niagara Falls, États-Unis
                         </a>
                     </div>
@@ -1345,8 +1384,8 @@
                 <div class="content-box" id="item-1960">
                     <div class="event-title">Barrage d'Assouan</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Barrage+d%27Assouan" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Barrage+d%27Assouan" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Égypte
                         </a>
                     </div>
@@ -1362,8 +1401,8 @@
                 <div class="content-box" id="item-1989">
                     <div class="event-title">Barrage des Trois-Gorges</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Fleuve+Yangts%C3%A9%2C+Chine" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Fleuve+Yangts%C3%A9%2C+Chine" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Fleuve Yangtsé, Chine
                         </a>
                     </div>
@@ -1379,8 +1418,8 @@
                 <div class="content-box" id="item-2006">
                     <div class="event-title">Contestation Sardar Sarovar</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Fleuve+Narmada%2C+Inde" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Fleuve+Narmada%2C+Inde" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Fleuve Narmada, Inde
                         </a>
                     </div>
@@ -1396,8 +1435,8 @@
                 <div class="content-box" id="item-2012">
                     <div class="event-title">Barrage de Belo Monte</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Amazonie%2C+Br%C3%A9sil" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Amazonie%2C+Br%C3%A9sil" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Amazonie, Brésil
                         </a>
                     </div>
@@ -1413,8 +1452,8 @@
                 <div class="content-box" id="item-2016">
                     <div class="event-title">Annulation du Barrage de Sivens</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Barrage+de+Sivens%2C+France" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Barrage+de+Sivens%2C+France" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             France
                         </a>
                     </div>
@@ -1430,8 +1469,8 @@
                 <div class="content-box" id="item-2020">
                     <div class="event-title">Démantèlement Fleuve Klamath</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Oregon-Californie%2C+%C3%89tats-Unis" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Oregon-Californie%2C+%C3%89tats-Unis" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Oregon-Californie, États-Unis
                         </a>
                     </div>
@@ -1447,8 +1486,8 @@
                 <div class="content-box" id="item-2024">
                     <div class="event-title">Abandon du Projet Rhônergia</div>
                     <div class="source-card">
-                        <a href="https://www.google.com/search?q=Rh%C3%B4ne%2C+France" target="_blank" rel="noopener noreferrer"
-                            rel="noopener noreferrer">
+                        <a href="https://www.google.com/search?q=Rh%C3%B4ne%2C+France" target="_blank"
+                            rel="noopener noreferrer" rel="noopener noreferrer">
                             Rhône, France
                         </a>
                     </div>
@@ -1470,29 +1509,37 @@
                     <h2 class="actor-title">EDF</h2>
                     <div class="engagement">
                         <div class="engagement-level tres-engage">Très engagé</div>
-                        <p>EDF est la société française qui s'occupe directement de la construction des barrages en France.
-                            En tant qu'entreprise appartenant à l'État français, EDF doit fournir de l'énergie à toute la
-                            France pour un prix raisonnable par tous les moyens les plus écologiques. L'entreprise est très
-                            engagée dans ce secteur car elle gère directement la construction des barrages pour augmenter la
+                        <p>EDF est la société française qui s'occupe directement de la construction des barrages en
+                            France.
+                            En tant qu'entreprise appartenant à l'État français, EDF doit fournir de l'énergie à toute
+                            la
+                            France pour un prix raisonnable par tous les moyens les plus écologiques. L'entreprise est
+                            très
+                            engagée dans ce secteur car elle gère directement la construction des barrages pour
+                            augmenter la
                             production d'électricité renouvelable en France.</p>
                     </div>
                     <div class="source-card">
                         <div class="title">Source :</div>
                         <a href="https://www.edf.fr/groupe-edf/produire-une-energie-respectueuse-du-climat/accelerer-le-developpement-des-energies-renouvelables/lenergie-hydraulique/les-avantages-de-lhydroelectricite"
-                        target="_blank" rel="noopener noreferrer">Site officiel EDF - Avantages de l'hydroélectricité</a>
+                            target="_blank" rel="noopener noreferrer">Site officiel EDF - Avantages de
+                            l'hydroélectricité</a>
                     </div>
                 </div>
 
                 <!-- Ministères -->
                 <div class="actor-card pour">
                     <div class="position-badge pour">Pour les barrages</div>
-                    <h2 class="actor-title">Ministère de l'Aménagement du Territoire et de la Décentralisation / Ministère
+                    <h2 class="actor-title">Ministère de l'Aménagement du Territoire et de la Décentralisation /
+                        Ministère
                         de la Transition Écologique</h2>
                     <div class="engagement">
                         <div class="engagement-level tres-engage">Très engagé</div>
                         <p>Ces deux ministères s'occupent des barrages en France et sont très engagés dans leur
-                            développement. Ils déposent des lois sur l'utilisation des barrages et leur sécurité, tout en
-                            informant le public sur leur utilisation. Liés à EDF par leur appartenance à l'État français,
+                            développement. Ils déposent des lois sur l'utilisation des barrages et leur sécurité, tout
+                            en
+                            informant le public sur leur utilisation. Liés à EDF par leur appartenance à l'État
+                            français,
                             ils cherchent à développer la production d'électricité en France de la manière la plus
                             écologique et la plus sécurisée possible.</p>
                     </div>
@@ -1509,16 +1556,20 @@
                     <h2 class="actor-title">Association France Nature Environnement</h2>
                     <div class="engagement">
                         <div class="engagement-level tres-engage">Très engagé</div>
-                        <p>Fédération française des associations de protection de la nature et de l'environnement, FNE est
+                        <p>Fédération française des associations de protection de la nature et de l'environnement, FNE
+                            est
                             très engagée contre les barrages. L'association organise de nombreuses manifestations et
-                            protestations. Leur objectif est de changer les mentalités pour diminuer le nombre de barrages
-                            qui impactent l'environnement et parfois les villes. La protection de l'environnement est leur
+                            protestations. Leur objectif est de changer les mentalités pour diminuer le nombre de
+                            barrages
+                            qui impactent l'environnement et parfois les villes. La protection de l'environnement est
+                            leur
                             priorité absolue. Elle collabore avec LPO, Greenpeace, RAC et FNH.</p>
                     </div>
                     <div class="source-card">
                         <div class="title">Source :</div>
                         <a href="https://fne.asso.fr/dossiers/secheresse-les-barrages-fausse-solution-face-au-dereglement-climatique"
-                            target="_blank" rel="noopener noreferrer">France Nature Environnement - Position sur les barrages</a>
+                            target="_blank" rel="noopener noreferrer">France Nature Environnement - Position sur les
+                            barrages</a>
                     </div>
                 </div>
 
@@ -1528,8 +1579,10 @@
                     <h2 class="actor-title">Fondation Rivières</h2>
                     <div class="engagement">
                         <div class="engagement-level peu-engage">Peu engagé</div>
-                        <p>Fondation qui œuvre à l'accès, la protection, la valorisation et la restauration des rivières.
-                            Bien qu'opposée aux barrages, elle est assez peu engagée avec un poids relativement faible. Ses
+                        <p>Fondation qui œuvre à l'accès, la protection, la valorisation et la restauration des
+                            rivières.
+                            Bien qu'opposée aux barrages, elle est assez peu engagée avec un poids relativement faible.
+                            Ses
                             actions se limitent principalement à la rédaction d'articles et au soutien financier pour la
                             restauration de certains cours d'eau. Elle dénonce notamment les problèmes de biodiversité
                             qu'engendrent certains barrages au Canada. Elle entretient des liens avec Saur, Veolia, EDF
@@ -1548,11 +1601,14 @@
                     <h2 class="actor-title">Syndicat des Énergies Renouvelables</h2>
                     <div class="engagement">
                         <div class="engagement-level moyennement-engage">Moyennement engagé</div>
-                        <p>Syndicat qui représente l'ensemble des filières des énergies renouvelables en France. Moyennement
+                        <p>Syndicat qui représente l'ensemble des filières des énergies renouvelables en France.
+                            Moyennement
                             engagé, il publie des articles et organise des événements pour promouvoir les barrages
                             hydroélectriques. En lien avec EDF, ses objectifs sont multiples : encourager la création de
-                            richesse dans les territoires, concilier les usages de l'eau, harmoniser transition énergétique
-                            et écologique, et donner à la filière les moyens de jouer pleinement son rôle dans le futur mix
+                            richesse dans les territoires, concilier les usages de l'eau, harmoniser transition
+                            énergétique
+                            et écologique, et donner à la filière les moyens de jouer pleinement son rôle dans le futur
+                            mix
                             énergétique.</p>
                     </div>
                     <div class="source-card">
@@ -1568,10 +1624,13 @@
                     <h2 class="actor-title">Employés d'EDF (dissidents)</h2>
                     <div class="engagement">
                         <div class="engagement-level peu-engage">Peu engagé</div>
-                        <p>Certains employés d'EDF s'opposent à la construction de certains barrages, créant des tensions
+                        <p>Certains employés d'EDF s'opposent à la construction de certains barrages, créant des
+                            tensions
                             internes dans l'entreprise. Bien qu'en lien avec EDF, ils ont très peu d'influence sur les
-                            décisions. Ils s'opposent particulièrement aux constructions qui pourraient être néfastes pour
-                            l'environnement ou contraires aux droits de l'homme. Leur engagement reste limité mais témoigne
+                            décisions. Ils s'opposent particulièrement aux constructions qui pourraient être néfastes
+                            pour
+                            l'environnement ou contraires aux droits de l'homme. Leur engagement reste limité mais
+                            témoigne
                             d'une diversité d'opinions même au sein de l'entreprise constructrice.</p>
                     </div>
                     <div class="source-card">
@@ -1606,7 +1665,8 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Énergie renouvelable :</strong> Considérée comme énergie renouvelable par
+                                        <strong>Énergie renouvelable :</strong> Considérée comme énergie renouvelable
+                                        par
                                         l'Union Européenne, complément aux énergies nucléaire, éolienne et solaire.
                                     </div>
                                 </div>
@@ -1614,10 +1674,11 @@
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
                                         <strong>Aménagement durable :</strong> "L'hydroélectricité a démontré son rôle
-                                        moteur dans l'aménagement durable du territoire et ses capacités à concilier enjeux
+                                        moteur dans l'aménagement durable du territoire et ses capacités à concilier
+                                        enjeux
                                         sociétaux, économiques et préservation de la biodiversité."
                                         <div class="source-card">
-                                            <a href="#" class="source-link">(Syndicat des énergies renouvelables)</a>
+                                            <a href="https://www.syndicat-energies-renouvelables.fr/en/home-page/" class="source-link">Syndicat des énergies renouvelables</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1636,20 +1697,23 @@
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
                                         <strong>Flexibilité :</strong> Production pliable et flexible, démarrage/arrêt
-                                        instantané pour équilibrer le réseau électrique pendant les pics de consommation.
+                                        instantané pour équilibrer le réseau électrique pendant les pics de
+                                        consommation.
                                     </div>
                                 </div>
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Tourisme :</strong> Création de lacs de retenue permettant le développement
+                                        <strong>Tourisme :</strong> Création de lacs de retenue permettant le
+                                        développement
                                         d'activités touristiques et dynamisant l'économie locale.
                                     </div>
                                 </div>
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Coût compétitif :</strong> 1 200-3 000 €/kW installé contre 5 500-8 100 €/kW
+                                        <strong>Coût compétitif :</strong> 1 200-3 000 €/kW installé contre 5 500-8 100
+                                        €/kW
                                         pour une centrale nucléaire.
                                     </div>
                                 </div>
@@ -1685,14 +1749,16 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Modification des écosystèmes :</strong> Les barrages modifient la présence
+                                        <strong>Modification des écosystèmes :</strong> Les barrages modifient la
+                                        présence
                                         des espèces - avantageux pour certaines, désavantageux pour d'autres.
                                     </div>
                                 </div>
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Obstacle à la migration :</strong> Barrages sans réservoir représentent un
+                                        <strong>Obstacle à la migration :</strong> Barrages sans réservoir représentent
+                                        un
                                         obstacle à la migration des espèces aquatiques.
                                     </div>
                                 </div>
@@ -1706,7 +1772,8 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Émissions de GES :</strong> CO₂ et méthane provenant de matière organique en
+                                        <strong>Émissions de GES :</strong> CO₂ et méthane provenant de matière
+                                        organique en
                                         décomposition. 730M à 2,4Mds tonnes de GES la première année. Les réservoirs
                                         représentaient 5,2% des émissions de méthane humaines en 2020.
                                     </div>
@@ -1714,7 +1781,8 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Méthylmercure :</strong> Production favorisée par les barrages, néfaste pour
+                                        <strong>Méthylmercure :</strong> Production favorisée par les barrages, néfaste
+                                        pour
                                         l'homme.
                                     </div>
                                 </div>
@@ -1728,7 +1796,8 @@
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
                                         <strong>Destruction biodiversité :</strong> Obstacle majeur à la continuité
-                                        écologique, empêche circulation des sédiments, poissons et invertébrés aquatiques.
+                                        écologique, empêche circulation des sédiments, poissons et invertébrés
+                                        aquatiques.
                                     </div>
                                 </div>
                             </div>
@@ -1745,7 +1814,8 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Dépendance climatique :</strong> Production dépendante de la disponibilité
+                                        <strong>Dépendance climatique :</strong> Production dépendante de la
+                                        disponibilité
                                         et quantité d'eau, fluctuations en cas de sécheresse ou fortes précipitations.
                                     </div>
                                 </div>
@@ -1802,14 +1872,16 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Contestations d'irrigation :</strong> Conflits liés à l'accès à l'eau pour
+                                        <strong>Contestations d'irrigation :</strong> Conflits liés à l'accès à l'eau
+                                        pour
                                         l'irrigation.
                                     </div>
                                 </div>
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Opposition environnementale :</strong> Groupes écologiques et populations
+                                        <strong>Opposition environnementale :</strong> Groupes écologiques et
+                                        populations
                                         locales s'opposent en raison des impacts sur biodiversité et cadre de vie.
                                     </div>
                                 </div>
@@ -1826,21 +1898,24 @@
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Contraintes environnementales :</strong> Développement limité malgré le rôle
+                                        <strong>Contraintes environnementales :</strong> Développement limité malgré le
+                                        rôle
                                         clé dans la transition énergétique.
                                     </div>
                                 </div>
                                 <div class="file">
                                     <span class="file-icon">📄</span>
                                     <div class="file-content">
-                                        <strong>Performance France :</strong> 1ère source d'électricité renouvelable, 26,2
+                                        <strong>Performance France :</strong> 1ère source d'électricité renouvelable,
+                                        26,2
                                         GW installés (20% de la puissance électrique), flexibilité énergétique (mise en
                                         service <10 minutes). </div>
                                     </div>
                                     <div class="file">
                                         <span class="file-icon">📄</span>
                                         <div class="file-content">
-                                            <strong>Paradoxe bas-carbone :</strong> Source d'énergie bas-carbone dont les
+                                            <strong>Paradoxe bas-carbone :</strong> Source d'énergie bas-carbone dont
+                                            les
                                             impacts environnementaux peuvent contrebalancer les avantages.
                                         </div>
                                     </div>
@@ -1900,9 +1975,11 @@
                                 en réguler le débit et/ou à stocker de l'eau</span> utilisé notamment pour produire de
                             l'électricité.
                             <br><br>
-                            Les barrages hydroélectriques sont des infrastructures complexes qui permettent de contrôler le
+                            Les barrages hydroélectriques sont des infrastructures complexes qui permettent de contrôler
+                            le
                             flux
-                            d'eau tout en générant de l'énergie renouvelable. Ils jouent un rôle crucial dans la production
+                            d'eau tout en générant de l'énergie renouvelable. Ils jouent un rôle crucial dans la
+                            production
                             d'électricité propre mais soulèvent également des questions environnementales importantes.
                         </div>
                     </div>
@@ -1915,14 +1992,17 @@
                         <div class="definition-content">
                             Énergie fournie par le mouvement de l'eau quel qu'il soit. Consiste à transformer <a
                                 href="https://www.connaissancedesenergies.org/questions-et-reponses-energies/quest-ce-que-lenergie-cinetique"
-                                target="_blank" rel="noopener noreferrer" style="color: #3498db;">l'énergie cinétique</a> du courant d'eau en énergie
+                                target="_blank" rel="noopener noreferrer" style="color: #3498db;">l'énergie
+                                cinétique</a> du courant d'eau en énergie
                             mécanique par une turbine, puis en <a
-                                href="https://www.connaissancedesenergies.org/fiche-pedagogique/electricite" target="_blank" rel="noopener noreferrer"
-                                style="color: #3498db;">énergie électrique</a> par un alternateur.
+                                href="https://www.connaissancedesenergies.org/fiche-pedagogique/electricite"
+                                target="_blank" rel="noopener noreferrer" style="color: #3498db;">énergie électrique</a>
+                            par un alternateur.
                             <br><br>
                             Cette forme d'énergie renouvelable représente une source importante d'électricité dans de
                             nombreux
-                            pays. Le processus de conversion énergétique se fait en plusieurs étapes : capture de l'énergie
+                            pays. Le processus de conversion énergétique se fait en plusieurs étapes : capture de
+                            l'énergie
                             hydraulique, transformation mécanique, puis génération électrique.
                         </div>
                     </div>
@@ -1933,15 +2013,20 @@
                             Biodiversité
                         </div>
                         <div class="definition-content">
-                            Diversité de la vie sur la Terre tel que les écosystèmes, les espèces et les gènes dans l'espace
+                            Diversité de la vie sur la Terre tel que les écosystèmes, les espèces et les gènes dans
+                            l'espace
                             et
-                            dans le temps, ainsi que les interactions au sein de ces niveaux d'organisation et entre eux.
+                            dans le temps, ainsi que les interactions au sein de ces niveaux d'organisation et entre
+                            eux.
                             <br><br>
-                            La biodiversité est un concept fondamental en écologie qui englobe toutes les formes de vie et
+                            La biodiversité est un concept fondamental en écologie qui englobe toutes les formes de vie
+                            et
                             leurs
-                            interactions. Dans le contexte des barrages hydroélectriques, elle représente un enjeu majeur
+                            interactions. Dans le contexte des barrages hydroélectriques, elle représente un enjeu
+                            majeur
                             car
-                            ces infrastructures peuvent significativement impacter les écosystèmes aquatiques et terrestres.
+                            ces infrastructures peuvent significativement impacter les écosystèmes aquatiques et
+                            terrestres.
                         </div>
                     </div>
 
@@ -1951,13 +2036,16 @@
                             Écosystème
                         </div>
                         <div class="definition-content">
-                            <span class="highlight">Ensemble formé par une communauté d'êtres vivants, animaux et végétaux,
+                            <span class="highlight">Ensemble formé par une communauté d'êtres vivants, animaux et
+                                végétaux,
                                 et
                                 par le milieu dans lequel ils vivent. Les composants d'un écosystème sont en interaction
                                 constante.</span>
                             <br><br>
-                            Les écosystèmes aquatiques sont particulièrement sensibles aux modifications provoquées par les
-                            barrages. Ces derniers peuvent altérer les flux d'eau, la température, la qualité de l'eau et
+                            Les écosystèmes aquatiques sont particulièrement sensibles aux modifications provoquées par
+                            les
+                            barrages. Ces derniers peuvent altérer les flux d'eau, la température, la qualité de l'eau
+                            et
                             les
                             cycles de reproduction des espèces.
                         </div>
@@ -1986,8 +2074,10 @@
                         <div class="definition-content">
                             Personnes, entreprises participant au débat de la controverse avec des prises de position.
                             <br><br>
-                            Les acteurs impliqués dans les débats sur les barrages hydroélectriques incluent les entreprises
-                            énergétiques, les gouvernements, les organisations environnementales, les communautés locales,
+                            Les acteurs impliqués dans les débats sur les barrages hydroélectriques incluent les
+                            entreprises
+                            énergétiques, les gouvernements, les organisations environnementales, les communautés
+                            locales,
                             les
                             scientifiques et les citoyens. Chacun apporte sa perspective et ses intérêts dans le débat.
                         </div>
@@ -2001,8 +2091,10 @@
                         <div class="definition-content">
                             Action de retenir quelque chose.
                             <br><br>
-                            Dans le contexte des barrages, la rétention fait référence à la capacité de l'infrastructure à
-                            retenir et stocker l'eau. Cette fonction permet de réguler les débits, créer des réservoirs et
+                            Dans le contexte des barrages, la rétention fait référence à la capacité de l'infrastructure
+                            à
+                            retenir et stocker l'eau. Cette fonction permet de réguler les débits, créer des réservoirs
+                            et
                             contrôler les inondations, mais peut aussi modifier les écosystèmes naturels.
                         </div>
                     </div>
@@ -2016,8 +2108,10 @@
                             Entreprise publique qui crée et exploite les installations électriques comme des barrages
                             hydroélectriques, parc éolien, centrale nucléaire...
                             <br><br>
-                            EDF est l'un des principaux acteurs français dans le domaine de l'hydroélectricité. L'entreprise
-                            gère de nombreux barrages sur le territoire français et développe des projets à l'international,
+                            EDF est l'un des principaux acteurs français dans le domaine de l'hydroélectricité.
+                            L'entreprise
+                            gère de nombreux barrages sur le territoire français et développe des projets à
+                            l'international,
                             tout en faisant face aux défis environnementaux et sociaux liés à ces infrastructures.
                         </div>
                     </div>
@@ -2030,34 +2124,115 @@
                     <div class="sources-grid">
                         <div class="source-card">
                             <div class="title">EDF - Hydraulique en chiffres</div>
-                            <a href="https://www.edf.fr/groupe-edf/comprendre/production/hydraulique/hydraulique-en-chiffres"
-                                target="_blank" rel="noopener noreferrer">Site officiel EDF</a>
+                            <a href="https://www.edf.fr" target="_blank" rel="noopener noreferrer">
+                                Site officiel EDF
+                            </a>
                         </div>
                         <div class="source-card">
                             <div class="title">Ministère de la Transition Écologique</div>
-                            <a href="https://www.ecologie.gouv.fr" target="_blank" rel="noopener noreferrer">Site
-                                gouvernemental</a>
+                            <a href="https://www.ecologie.gouv.fr" target="_blank" rel="noopener noreferrer">
+                                Site gouvernemental
+                            </a>
                         </div>
                         <div class="source-card">
                             <div class="title">France Nature Environnement (FNE)</div>
-                            <a href="https://fne.asso.fr/dossiers/secheresse-les-barrages-fausse-solution-face-au-dereglement-climatique"
-                                target="_blank" rel="noopener noreferrer">Dossier sécheresse et barrages</a>
+                            <a href="https://fne.asso.fr" target="_blank" rel="noopener noreferrer">
+                                Site associatif
+                            </a>
+                            <a href=" https://fne.asso.fr/dossiers/secheresse-les-barrages-fausse-solution-face-au-dereglement-climatique"
+                                target="_blank" rel="noopener noreferrer">
+                                Dossier “Sécheresse : les barrages, fausse solution face au dérèglement climatique”
+                            </a>
                         </div>
                         <div class="source-card">
                             <div class="title">Fondation Rivières</div>
+                            <a href="https://fondationrivieres.org" target="_blank" rel="noopener noreferrer">
+                                Site associatif
+                            </a>
                             <a href="https://fondationrivieres.org/nos-actions/impact-environnemental-barrages-hydroelectriques/"
-                                target="_blank" rel="noopener noreferrer">Impact environnemental des barrages</a>
+                                target="_blank" rel="noopener noreferrer">
+                                Impact environnemental des barrages hydroélectriques
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Syndicat des énergies renouvelables</div>
+                            <a href="https://www.syndicat-energies-renouvelables.fr" target="_blank"
+                                rel="noopener noreferrer">
+                                Site
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Libération</div>
+                            <a href="https://www.liberation.fr/international/moyen-orient/un-projet-de-barrage-hydroelectrique-dedf-en-plein-desert-darabie-saoudite-secoue-lentreprise-20240301_ILWYI5DSOZFPTNOQIVSUFVXTMU/"
+                                target="_blank" rel="noopener noreferrer">
+                                Projet EDF en Arabie Saoudite
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Wikipédia</div>
+                            <a href="https://en.wikipedia.org/wiki/Adams_Power_Plant_Transformer_House" target="_blank"
+                                rel="noopener noreferrer">
+                                Barrage Adams Power Plant (USA)
+                            </a>
+                            <a href="https://fr.wikipedia.org/wiki/Haut_barrage_d%27Assouan" target="_blank"
+                                rel="noopener noreferrer">
+                                Haut barrage d’Assouan (Égypte)
+                            </a>
+                            <a href="https://fr.wikipedia.org/wiki/Barrage_des_Trois-Gorges" target="_blank"
+                                rel="noopener noreferrer">
+                                Barrage des Trois-Gorges (Chine)
+                            </a>
+                            <a href="https://en.wikipedia.org/wiki/Belo_Monte_Dam" target="_blank"
+                                rel="noopener noreferrer">
+                                Belo Monte Dam (Brésil)
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Africanews</div>
+                            <a href="https://fr.africanews.com/2021/01/13/le-barrage-d-assouan-fete-ses-50-ans-et-reste-controverse/"
+                                target="_blank" rel="noopener noreferrer">
+                                Barrage d’Assouan
+                            </a>
                         </div>
                         <div class="source-card">
                             <div class="title">Nature Geoscience</div>
-                            <a href="https://www.nature.com/articles/s41561-021-00880-2"
-                                target="_blank" rel="noopener noreferrer">Émissions
-                                CO₂ et CH₄ des barrages</a>
+                            <a href="https://blog.bio-ressources.com/" target="_blank" rel="noopener noreferrer">
+                                Trois Gorges
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Cairn</div>
+                            <a href="https://shs.cairn.info/revue-herodote-2001-3-page-73?lang=fr" target="_blank"
+                                rel="noopener noreferrer">
+                                Controverse Sardar Sarovar (Inde)
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Mongabay</div>
+                            <a href="https://news.mongabay.com/2012/08/brazils-controversial-belo-monte-back-on-track-after-court-decision-overruled"
+                                target="_blank" rel="noopener noreferrer">
+                                Belo Monte
+                            </a>
                         </div>
                         <div class="source-card">
                             <div class="title">Le Monde</div>
                             <a href="https://www.lemonde.fr/international/article/2024/06/19/dans-le-nord-de-la-californie-les-barrages-de-la-discorde_6241146_3210.html"
-                                target="_blank" rel="noopener noreferrer">Démantèlement barrages Klamath River</a>
+                                target="_blank" rel="noopener noreferrer">
+                                Démantèlement des barrages de la Klamath River
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Rue89 Lyon</div>
+                            <a href="https://www.rue89lyon.fr/2024/09/02/rhonergia-etat-abandonne-projet-conteste-barrage-rhone"
+                                target="_blank" rel="noopener noreferrer">
+                                Projet Rhônergia (France)
+                            </a>
+                        </div>
+                        <div class="source-card">
+                            <div class="title">Nature Geoscience</div>
+                            <a href="ps://www.nature.com/articles/s41561-021-00880-2" target="_blank"
+                                rel="noopener noreferrer">
+                                Émissions CO₂ et CH₄ des barrages</a>
                         </div>
                     </div>
                 </div>
@@ -2174,5 +2349,26 @@
             window.addEventListener('resize', adjustContentBoxPosition);
         </script>
 </body>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>© 2025 Barrages Controverse. Tous droits réservés.</p>
+            <p>
+                Site fait dans le cadre de cours de
+                <a href="https://www.controverses-esiee.fr/" target="_blank" rel="noopener noreferrer">
+                    contreverse
+                </a>
+                a
+                <a href="https://www.esiee.fr/" target="_blank" rel="noopener noreferrer">
+                    ESIEE Paris
+                </a>
+            </p>
+        </div>
+        <div class="footer-logo">
+            <img src="esieeLogo.png" alt="Logo ESIEE Paris">
+        </div>
+    </div>
+</footer>
+
 
 </html>
